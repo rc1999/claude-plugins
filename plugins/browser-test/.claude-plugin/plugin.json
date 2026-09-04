@@ -1,0 +1,12 @@
+{
+  "$schema": "https://anthropic.com/schemas/claude-plugin/v1.json",
+  "name": "browser-test",
+  "displayName": "Browser Test",
+  "version": "1.0.0",
+  "description": "Browser-test a deployed web app that sits behind an SSO login wall (Cloudflare Access, Google SSO, Okta). Reuses your already-authenticated Chrome session over raw Chrome DevTools Protocol with a zero-dependency driver (`rawcdp.cjs`), runs a VERIFY/CHECK QA loop with hard assertions, and writes a report. Ships the `browser-test` skill.",
+  "author": { "name": "Rafal Czerniawski" },
+  "homepage": "https://github.com/rc1999/claude-plugins",
+  "repository": "https://github.com/rc1999/claude-plugins",
+  "license": "MIT",
+  "keywords": ["browser", "testing", "qa", "cdp", "chrome-devtools-protocol", "sso", "cloudflare-access", "skills"]
+}

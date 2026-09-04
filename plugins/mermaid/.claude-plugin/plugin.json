@@ -1,0 +1,12 @@
+{
+  "$schema": "https://anthropic.com/schemas/claude-plugin/v1.json",
+  "name": "mermaid",
+  "displayName": "Mermaid",
+  "version": "1.0.0",
+  "description": "Author Mermaid diagrams that render correctly the first time and read clearly. Verified per-type templates (flowchart, sequence, state, class, ER, gantt), readability and layout rules (dark-background contrast header, reserved-word traps, too-wide fixes), and a render-and-verify loop. Ships the `mermaid` skill.",
+  "author": { "name": "Rafal Czerniawski" },
+  "homepage": "https://github.com/rc1999/claude-plugins",
+  "repository": "https://github.com/rc1999/claude-plugins",
+  "license": "MIT",
+  "keywords": ["mermaid", "diagrams", "flowchart", "sequence-diagram", "documentation", "skills"]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://anthropic.com/schemas/claude-plugin/v1.json",
+  "name": "diagram",
+  "displayName": "Diagram",
+  "version": "1.0.0",
+  "description": "Produce a diagram in the form its destination can actually render: hand-authored SVG (embedded in a page or portable as a file), a Mermaid fence, or a PNG. Carries the format-choice table, the SVG craft that survives a theme change, the conversions between all three, and a render-and-look loop in a real browser. Ships the `diagram` skill.",
+  "author": { "name": "Rafal Czerniawski" },
+  "homepage": "https://github.com/rc1999/claude-plugins",
+  "repository": "https://github.com/rc1999/claude-plugins",
+  "license": "MIT",
+  "keywords": ["diagrams", "svg", "mermaid", "png", "documentation", "skills"]
+}

@@ -6,6 +6,7 @@ Rafal's Claude Code plugin marketplace. Marketplace name: `rafal`.
 
 | Plugin | What it does |
 |---|---|
+| `diagram` | Produce a diagram in the form its destination can actually render: hand-authored SVG (embedded in a page, or portable as a file), a Mermaid fence, or a PNG. Carries the format-choice table, the SVG craft that survives a theme change, the conversions between all three, and a render-and-look loop in a real browser. |
 | `mermaid` | Author Mermaid diagrams that render correctly the first time and read clearly. Verified templates per diagram type (flowchart, sequence, state, class, ER, gantt), readability and layout rules, the dark-background contrast fix, and a render-and-verify loop. |
 | `browser-test` | Browser-test a deployed web app behind an SSO login wall (Cloudflare Access, Google SSO, Okta). Reuses your already-authenticated Chrome session over raw Chrome DevTools Protocol with a zero-dependency driver (`rawcdp.cjs`). VERIFY/CHECK QA loop, hard assertions, report template. |
 
@@ -32,6 +33,7 @@ Or inside a Claude Code session:
 Terminal:
 
 ```bash
+claude plugin install diagram@rafal
 claude plugin install mermaid@rafal
 claude plugin install browser-test@rafal
 ```
@@ -39,11 +41,12 @@ claude plugin install browser-test@rafal
 Inside a session:
 
 ```
+/plugin install diagram@rafal
 /plugin install mermaid@rafal
 /plugin install browser-test@rafal
 ```
 
-Install one or both. The `@rafal` suffix names this marketplace.
+Install any of them. The `@rafal` suffix names this marketplace.
 
 ### 3. Verify
 
@@ -51,12 +54,13 @@ Install one or both. The `@rafal` suffix names this marketplace.
 claude plugin list
 ```
 
-Both plugins should show as installed. In a session, `/mermaid` and `/browser-test` appear in the skill list. Restart any open Claude Code session so the new skills load.
+The plugins you installed should show. In a session, `/diagram`, `/mermaid` and `/browser-test` appear in the skill list. Restart any open Claude Code session so the new skills load.
 
 ### Update
 
 ```bash
 claude plugin marketplace update rafal
+claude plugin update diagram@rafal
 claude plugin update mermaid@rafal
 claude plugin update browser-test@rafal
 ```
@@ -64,12 +68,17 @@ claude plugin update browser-test@rafal
 ### Uninstall
 
 ```bash
+claude plugin uninstall diagram@rafal
 claude plugin uninstall mermaid@rafal
 claude plugin uninstall browser-test@rafal
 claude plugin marketplace remove rafal
 ```
 
 ## First use
+
+### diagram
+
+No setup beyond a local Chrome, which it uses to screenshot what it drew. Say where the diagram has to land ("a diagram for the README", "add one to this page") and it picks the form from the destination: a Mermaid fence where the renderer supports one, hand-authored SVG where the layout has to be exact, a PNG only where SVG is refused. It hands the Mermaid path to the `mermaid` skill. References live in `plugins/diagram/skills/diagram/references/`.
 
 ### mermaid
 

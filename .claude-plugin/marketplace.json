@@ -1,29 +1,62 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "rafal",
-  "owner": { "name": "Rafal Czerniawski" },
+  "owner": {
+    "name": "Rafal Czerniawski"
+  },
   "metadata": {
-    "description": "Rafal's Claude Code plugins: Mermaid diagram authoring and SSO-gated browser testing.",
+    "description": "Rafal's Claude Code plugins: diagram authoring across SVG, Mermaid and PNG, Mermaid-specific templates, and SSO-gated browser testing.",
     "version": "1.0.0"
   },
   "plugins": [
+    {
+      "name": "diagram",
+      "source": "./plugins/diagram",
+      "description": "Produce a diagram in the form its destination can render: hand-authored SVG (embedded in a page, or portable as a file), a Mermaid fence, or a PNG. Format-choice table, the SVG craft that survives a theme change, the conversions between all three, and a render-and-look loop in a real browser.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Rafal Czerniawski"
+      },
+      "license": "MIT",
+      "keywords": [
+        "diagrams",
+        "svg",
+        "mermaid",
+        "png",
+        "documentation"
+      ]
+    },
     {
       "name": "mermaid",
       "source": "./plugins/mermaid",
       "description": "Author Mermaid diagrams that render correctly the first time and read clearly. Verified per-type templates (flowchart, sequence, state, class, ER, gantt), readability and layout rules, dark-background contrast fix, and a render-and-verify loop.",
       "version": "1.0.0",
-      "author": { "name": "Rafal Czerniawski" },
+      "author": {
+        "name": "Rafal Czerniawski"
+      },
       "license": "MIT",
-      "keywords": ["mermaid", "diagrams", "documentation"]
+      "keywords": [
+        "mermaid",
+        "diagrams",
+        "documentation"
+      ]
     },
     {
       "name": "browser-test",
       "source": "./plugins/browser-test",
       "description": "Browser-test a deployed web app behind an SSO login wall (Cloudflare Access, Google SSO, Okta) by reusing your logged-in Chrome session over raw CDP. Zero-dependency driver, VERIFY/CHECK QA loop, hard assertions, report template.",
       "version": "1.0.0",
-      "author": { "name": "Rafal Czerniawski" },
+      "author": {
+        "name": "Rafal Czerniawski"
+      },
       "license": "MIT",
-      "keywords": ["browser", "testing", "qa", "cdp", "sso"]
+      "keywords": [
+        "browser",
+        "testing",
+        "qa",
+        "cdp",
+        "sso"
+      ]
     }
   ]
 }

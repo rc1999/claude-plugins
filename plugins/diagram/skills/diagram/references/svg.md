@@ -48,6 +48,23 @@ the arrangement that works everywhere.
 the rules into an internal `<style>`, add the `xmlns`, and re-check the four things in
 `verify.md` — a token that resolved against the page may not have an equivalent standing alone.
 
+**Then check the entities, because a portable file is parsed as XML.** Inside a page the markup is
+parsed as HTML, where `&mdash;`, `&nbsp;`, `&times;` and the rest of the named set are defined. A
+standalone `.svg` served to an `<img>` is XML, where **only `&amp;` `&lt;` `&gt;` `&quot;` `&apos;`
+exist**. Any other named entity is a parse error, and a parse error renders **nothing at all**: no
+partial drawing, no console message a reader would see, just a broken-image box. It is the one
+failure that survives a careful conversion, because the character looked right in the page it came
+from.
+
+Write the character itself — an em dash, `×`, `·` — and prove it before publishing:
+
+```bash
+python3 -c "import xml.etree.ElementTree as ET; ET.parse('flow.svg')"   # silent = parses
+grep -o '&[a-zA-Z]*;' flow.svg | sort -u                                # want only the five
+```
+
+An em dash in an `aria-label` or a `<title>` counts: the parser reaches it too.
+
 ## Lay the grid before you draw
 
 Pick `viewBox="0 0 W H"` from the content, not from a preset, and let CSS scale it

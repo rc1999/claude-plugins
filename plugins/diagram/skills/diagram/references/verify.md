@@ -17,7 +17,8 @@ linter catches any of them. **Render it, screenshot it, look at it.**
 ## The four checks
 
 - **It is there.** Every box, every line, every arrowhead. A shape drawn outside the `viewBox` is
-  absent with no error.
+  absent with no error, and a standalone file that fails to parse as XML shows a broken-image box
+  rather than a diagram — `svg.md` carries the entity rule that causes it.
 - **Every label is readable and inside the frame.** Watch the left edge especially: an
   `text-anchor="end"` label grows leftward and disappears past zero.
 - **No label touches a line or another label.** This is what you are really here for; it is the

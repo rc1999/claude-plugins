@@ -5,7 +5,7 @@
     "name": "Rafal Czerniawski"
   },
   "metadata": {
-    "description": "Rafal's Claude Code plugins: diagram authoring across SVG, Mermaid and PNG, Mermaid-specific templates, and SSO-gated browser testing.",
+    "description": "Rafal's Claude Code plugins: diagram authoring across SVG, Mermaid and PNG, Mermaid-specific templates, and SSO-gated browser testing, and session reviews from Claude Code transcripts.",
     "version": "1.0.0"
   },
   "plugins": [
@@ -56,6 +56,23 @@
         "qa",
         "cdp",
         "sso"
+      ]
+    },
+    {
+      "name": "session-reviews",
+      "source": "./plugins/session-reviews",
+      "description": "Review Claude Code sessions: rebuild context across chats (recall), catch up within one (ketchup), resume a prior session (session-pickup), and turn what the transcripts show into a personal mode skill (automate-me) or skill edits (reflect). Ported from Lauren Tan's pstack.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Rafal Czerniawski"
+      },
+      "license": "MIT",
+      "keywords": [
+        "sessions",
+        "transcripts",
+        "recall",
+        "review",
+        "pstack"
       ]
     }
   ]

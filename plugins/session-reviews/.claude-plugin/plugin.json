@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/schemas/claude-plugin/v1.json",
+  "name": "session-reviews",
+  "displayName": "Session Reviews",
+  "version": "1.0.0",
+  "description": "Review Claude Code sessions: rebuild context across chats, catch up within one, resume a prior session, and turn what the transcripts show into skill edits. Ported from Lauren Tan's pstack (MIT). Ships the `recall`, `ketchup`, `session-pickup`, `automate-me`, `reflect` and `unslop` skills.",
+  "author": {
+    "name": "Rafal Czerniawski"
+  },
+  "homepage": "https://github.com/rc1999/claude-plugins",
+  "repository": "https://github.com/rc1999/claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "session-reviews",
+    "recall",
+    "ketchup",
+    "reflect",
+    "session-pickup",
+    "automate-me",
+    "unslop",
+    "transcripts",
+    "pstack",
+    "skills"
+  ]
+}

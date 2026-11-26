@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/schemas/claude-plugin/v1.json",
   "name": "session-reviews",
   "displayName": "Session Reviews",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Review Claude Code sessions: rebuild context across chats, catch up within one, resume a prior session, and turn what the transcripts show into skill edits. Ported from Lauren Tan's pstack (MIT). Ships the `recall`, `ketchup`, `session-pickup`, `automate-me`, `reflect` and `unslop` skills.",
   "author": {
     "name": "Rafal Czerniawski"

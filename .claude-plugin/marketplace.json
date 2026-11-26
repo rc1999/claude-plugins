@@ -62,7 +62,7 @@
       "name": "session-reviews",
       "source": "./plugins/session-reviews",
       "description": "Review Claude Code sessions: rebuild context across chats (recall), catch up within one (ketchup), resume a prior session (session-pickup), and turn what the transcripts show into a personal mode skill (automate-me) or skill edits (reflect). Ported from Lauren Tan's pstack.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Rafal Czerniawski"
       },

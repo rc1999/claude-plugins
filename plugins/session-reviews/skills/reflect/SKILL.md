@@ -18,4 +18,6 @@ Present Accepted (problem, proposal, skill), Rejected (reason) and Backlog, and 
 
 Edit a project skill or a personal skill where it lives: `.claude/skills/<skill>/` or `~/.claude/skills/<skill>/`. A skill that came from an installed plugin lives under `~/.claude/plugins/`, and the next plugin update overwrites it there. Before approval, show its destination, `.claude/skills/<skill>/` or `~/.claude/skills/<skill>/`. After approval, copy the skill folder there and edit the copy. Never open a PR or push.
 
+A plugin whose source the user owns is the one exception. Ask once whether the edit goes to that source and not to a personal copy: a personal copy fixes the skill for one person and hides every later update to it. If it goes to the source, find the repo that authors the skill before you edit, because a plugin repo can be generated from another repo, and its README or agent guide says so. Follow that repo's release steps, such as a version bump and a catalog entry. Open a pull request there only when the user says so, and merge nothing.
+
 Habits that span many chats, written up as one personal skill, are the **automate-me** skill, not this.

@@ -1,5 +1,4 @@
 {
-  "$schema": "https://anthropic.com/schemas/claude-plugin/v1.json",
   "name": "mermaid",
   "displayName": "Mermaid",
   "version": "1.0.0",

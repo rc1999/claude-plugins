@@ -1,5 +1,4 @@
 {
-  "$schema": "https://anthropic.com/schemas/claude-plugin/v1.json",
   "name": "session-reviews",
   "displayName": "Session Reviews",
   "version": "1.0.0",
